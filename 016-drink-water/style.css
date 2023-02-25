@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+:root {
+  --border-color: #104fcc;
+  --fill-color: #63b0fd;
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #2c8fe9;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+h1 {
+  margin: 0.625rem 0 0;
+}
+
+h3 {
+  font-weight: 400;
+  margin: 0.625rem 0;
+}
+
+.cup {
+  background-color: #fff;
+  border: 0.25rem solid var(--border-color);
+  color: var(--border-color);
+  border-radius: 0 0 2.5rem 2.5rem;
+  height: 20.625rem;
+  width: 9.375rem;
+  margin: 1.875rem 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.cup.cup-small {
+  height: 5.9375rem;
+  width: 3.125rem;
+  border-radius: 0 0 0.9375rem 0.9375rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  font-size: 0.875rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0.3125rem;
+  transition: 0.3s ease;
+}
+
+.cup.cup-small.full {
+  background-color: var(--fill-color);
+  color: #fff;
+}
+
+.cups {
+  display: flex;
+  flex-wrap: wrap;
+  width: 17.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.remained {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex: 1;
+  transition: 0.3s ease;
+}
+
+.remained span {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.remained small {
+  font-size: 0.75rem;
+}
+
+.percentage {
+  height: 0;
+  background-color: var(--fill-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.875rem;
+  transition: 0.3s ease;
+}
+
+.text {
+  text-align: center;
+  margin: 0 0 1rem;
+}
