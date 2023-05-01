@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #222;
+  padding-bottom: 50px;
+}
+
+.container {
+  max-width: 75rem;
+  margin: 0 auto;
+}
+
+.nav {
+  position: fixed;
+  background-color: #222;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 0;
+  transition: padding 0.3s ease-in-out;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.4375rem 1rem;
+}
+
+.nav.active {
+  background-color: #fff;
+  box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.nav.active .container {
+  padding: 10px 0;
+  transition: padding 0.3s ease-in-out;
+}
+
+.nav li a.current,
+.nav a:hover {
+  color: #cd442a;
+  font-weight: bold;
+}
+
+.nav.active a {
+  color: #000;
+}
+
+.hero {
+  background-image: url("https://source.unsplash.com/random/?laptop,computer");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  height: 100vh;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  margin-bottom: 1.25rem;
+  z-index: -2;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+.hero h1 {
+  font-size: 2.875rem;
+  margin: -1.25rem 0 1.25rem;
+}
+
+.hero p {
+  font-size: 1.25rem;
+}
+
+.content h2,
+.content h3 {
+  font-size: 150%;
+  margin: 1.25rem 0;
+}
+
+.content p {
+  color: #555;
+  line-height: 1.8;
+}
