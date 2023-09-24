@@ -8,7 +8,7 @@ const messages = [
  'Hello, Guyana',
 ];
 
-const types = [
+const types = [ 
     'info',
     'success',
     'error'
